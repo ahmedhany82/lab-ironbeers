@@ -186,6 +186,10 @@ nav ul li a {
     padding-bottom: 75px;
 }
 
+.beerDetailed h5 {
+    font-weight: bold;
+}
+
 .row {
     padding-bottom: 75px;
 }
