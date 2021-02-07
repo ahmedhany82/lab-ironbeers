@@ -1,32 +1,46 @@
 {{#each clickedBeer}}
-    {{> beerpartial this}}
-    <h3>Food Pairing</h3>
-    <ul>
-        {{#each this.food_pairing}}
-            <li>{{this}}</li>
-        {{/each}}
-    </ul>
-    <h3>Brewers Tips</h3>
-    <p>{{this.brewers_tips}}</p>
-    <h3>Volume</h3>
-    <ul>
-        <li>value: <span>{{this.volume.value}}</li>
-        <li>unit: <span>{{this.volume.unit}}</li>
-    </ul>
-    <h3>Method</h3>
-    <h4>mash_temp</h4>
-    {{#each this.method.mash_temp}}
-     <ul>
-        <li>Value: {{this.temp.value}}</li>
-        <li>Unit: {{this.temp.unit}}</li>
-        <li>Duration: {{this.duration}}</li>
-     </ul>
-    {{/each}}
-    <h4>Fermentation</h4>
-    <h5>Temperature</h5>
-    <ul>
-        <li>Value: {{this.method.fermentation.temp.value}}</li>
-        <li>Unit: {{this.method.fermentation.temp.unit}}</li>
-    </ul>
-    <h4>Twist: {{this.method.twist}}</h4>
+<div class="beerDetailed">
+        <div class="randomPartial">
+        {{> beerpartial this}}
+    </div>
+    <div class="random-addon">
+        <div class="pairing">
+            <h5>Food Pairing</h5>
+            <ul>
+                {{#each this.food_pairing}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="brewersTips">
+            <h5>Brewers Tips</h5>
+            <p>{{this.brewers_tips}}</p>
+        </div>
+        <div>
+            <h5>Volume</h5>
+            <ul>
+                <li>value: <span>{{this.volume.value}}</li>
+                <li>unit: <span>{{this.volume.unit}}</li>
+            </ul>
+        </div>
+        <div>
+            <h5>Method</h5>
+            <h6>mash_temp</h6>
+            {{#each this.method.mash_temp}}
+            <ul>
+                <li>Value: {{this.temp.value}}</li>
+                <li>Unit: {{this.temp.unit}}</li>
+                <li>Duration: {{this.duration}}</li>
+            </ul>
+            {{/each}}
+            <h5>Fermentation</h5>
+            <h6>Temperature</h6>
+            <ul>
+                <li>Value: {{this.method.fermentation.temp.value}}</li>
+                <li>Unit: {{this.method.fermentation.temp.unit}}</li>
+            </ul>
+            <h6>Twist: {{this.method.twist}}</h6>
+        </div>
+    </div>
+</div>
 {{/each}}

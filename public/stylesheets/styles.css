@@ -14,7 +14,11 @@ body {
     height: 100%;
     font-family: Roboto;
     margin: 0px 0px;
-    padding: 0px 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 75px;
+    overflow: auto;
 }
 
 .beerImage {
@@ -84,11 +88,11 @@ nav ul li a {
     background-color: #0a2c42;
     color: #bfbfbf;
     width: 100%;
-    height: 7%;
+    height: 50px;
     text-align: left;
 }
 .footer h4 {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 10px;
 }
 
@@ -174,7 +178,14 @@ nav ul li a {
     margin-left: 290px;
 }
 
-
 .random h5 {
     font-weight: bold;
+}
+
+.beerDetailed {
+    padding-bottom: 75px;
+}
+
+.row {
+    padding-bottom: 75px;
 }
